@@ -38,6 +38,7 @@ public class AuthController {
         response.addCookie(cookie);
 
         session.removeAttribute("token");
+        session.invalidate();
 
         return "redirect:/";
     }
